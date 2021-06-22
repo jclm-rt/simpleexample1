@@ -17,7 +17,7 @@ def nugget_test(task):
     task.run(napalm_get, getters=["get_facts"])
 
 #results = nr.run(task=nugget_test)
-devices = nr.filter(asset_tag = "01-SW01-R1P2")
+devices = nr.filter(asset_tag = "01-SW03-R1P2")
 result = devices.run(task=nugget_test)
 print_result(result)
 failure = nr.data.failed_hosts
