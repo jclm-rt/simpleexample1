@@ -1,0 +1,13 @@
+---
+
+inventory:
+  plugin: NBInventory
+  options:
+    nb_url: 'http://0.0.0.0:8000'
+    nb_token: '9dfe8a955f12c000bcf9617e48a820a571785d89'
+    ssl_verify: False
+
+runners:
+  plugin: threaded
+  options:
+    num_workers: 200
