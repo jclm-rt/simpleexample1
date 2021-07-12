@@ -6,11 +6,13 @@ from nornir_utils.plugins.functions import print_result
 from nornir.core.filter import F
 from prettyprinter import pprint
 from nornir.core.exceptions import NornirExecutionError
+import os
+
 
 nr = InitNornir(config_file="config.yaml")
 
-nr.inventory.defaults.username = "jlapaca"
-nr.inventory.defaults.password = "A#!B59E+ZnPS"
+nr.inventory.defaults.username = os.getenv("USERNAME_NETADMIN")
+nr.inventory.defaults.password = os.getenv("PASSWORD_NETADMIN")
 #nr.inventory.defaults.port = 22
 
 def nugget_test(task):
